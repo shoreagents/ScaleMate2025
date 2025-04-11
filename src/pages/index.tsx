@@ -1,12 +1,18 @@
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
+import React from 'react';
+import Head from 'next/head';
+import HeroSection from './home/components/HeroSection';
+import QuoteCalculator from './home/components/QuoteCalculator';
 
-export default function Index() {
-  const router = useRouter();
+export default function Home() {
+  return (
+    <>
+      <Head>
+        <title>ScaleMate - Scale Your Team Without The Burnout</title>
+        <meta name="description" content="Leverage offshore talent and AI tools to grow your business smarter. Trusted by 500+ companies across USA, Australia, and New Zealand." />
+      </Head>
 
-  useEffect(() => {
-    router.push('/home');
-  }, [router]);
-
-  return null;
+      <HeroSection />
+      <QuoteCalculator />
+    </>
+  );
 } 
