@@ -1,0 +1,1 @@
+SELECT create_admin_user('james.dulinayan@gmail.com', 'Ja9617072');
